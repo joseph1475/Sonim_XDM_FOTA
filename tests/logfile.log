@@ -1050,3 +1050,49 @@
 2020-07-31 22:30:32,154 :INFO : clickAddPackage :Package uploading started,please wait
 2020-08-14 15:17:40,555 :INFO : test_5MB :upload failed
 2020-08-14 15:17:40,603 :INFO : test_5MB :=============moving to next upload !!!=============
+2020-09-03 13:14:34,392 :INFO : test_5MB :upload failed
+2020-09-03 13:14:34,392 :INFO : test_5MB :=============moving to next upload !!!=============
+2020-09-03 13:14:34,528 :INFO : clickAddPackage :Package uploading started,please wait
+2020-09-03 13:16:53,081 :INFO : test_5MB :upload failed
+2020-09-03 13:16:53,081 :INFO : test_5MB :=============moving to next upload !!!=============
+2020-09-03 13:16:53,224 :INFO : clickAddPackage :Package uploading started,please wait
+2020-09-03 13:19:57,750 :INFO : test_5MB :Updating 5MB package details
+2020-09-03 13:19:57,750 :INFO : test_5MB :ATT v38 00 to v38 00 5MB
+2020-09-03 13:19:57,750 :INFO : test_5MB :Upgrade from ATT v38 to v38 5MB
+2020-09-03 13:19:57,750 :INFO : test_5MB :5SA.0.4-14-8.1.0-10.38.00
+2020-09-03 13:19:57,750 :INFO : test_5MB :5SA.0.4-98-8.1.0-10.38.00.5MB
+2020-09-03 13:19:57,987 :INFO : test_5MB :upload failed
+2020-09-03 13:19:57,987 :INFO : test_5MB :=============moving to next upload !!!=============
+2020-09-03 13:19:58,122 :INFO : clickAddPackage :Package uploading started,please wait
+2020-09-03 13:22:47,767 :INFO : test_5MB :Updating 5MB package details
+2020-09-03 13:22:47,767 :INFO : test_5MB :ATT v38 00 to v38 00 5MB
+2020-09-03 13:22:47,767 :INFO : test_5MB :Upgrade from ATT v38 to v38 5MB
+2020-09-03 13:22:47,767 :INFO : test_5MB :5SA.0.4-14-8.1.0-10.38.00
+2020-09-03 13:22:47,767 :INFO : test_5MB :5SA.0.4-98-8.1.0-10.38.00.5MB
+2020-09-03 13:22:47,970 :INFO : test_5MB :D:\Python_XDM\v38\packages\ATT_v38_00_to_v38_00_5MB.zip
+2020-09-03 13:22:53,994 :INFO : clickAddPackage :Package uploading started,please wait
+2020-09-03 13:28:48,963 :INFO : test_5MB :upload failed
+2020-09-03 13:28:48,963 :INFO : test_5MB :=============moving to next upload !!!=============
+2020-09-03 13:28:49,107 :INFO : clickAddPackage :Package uploading started,please wait
+2020-09-03 13:31:22,280 :INFO : test_5MB :upload failed
+2020-09-03 13:31:22,280 :INFO : test_5MB :=============moving to next upload !!!=============
+2020-09-03 13:31:22,459 :INFO : clickAddPackage :Package uploading started,please wait
+2020-09-03 13:34:29,495 :INFO : test_5MB :upload failed
+2020-09-03 13:34:29,495 :INFO : test_5MB :=============moving to next upload !!!=============
+2020-09-03 13:34:29,586 :INFO : clickAddPackage :Package uploading started,please wait
+2020-09-03 15:13:21,734 :INFO : test_5MB :upload failed
+2020-09-03 15:13:21,752 :INFO : test_5MB :=============moving to next upload !!!=============
+2020-09-03 15:13:21,994 :INFO : clickAddPackage :Package uploading started,please wait
+2020-09-03 15:18:05,092 :INFO : test_5MB :upload failed
+2020-09-03 15:18:05,092 :INFO : test_5MB :=============moving to next upload !!!=============
+2020-09-03 15:18:05,264 :INFO : clickAddPackage :Package uploading started,please wait
+2020-09-03 15:58:57,746 :INFO : test_5MB :upload failed
+2020-09-03 15:58:57,746 :INFO : test_5MB :=============moving to next upload !!!=============
+2020-09-03 15:58:57,894 :INFO : clickAddPackage :Package uploading started,please wait
+2020-09-03 16:05:17,472 :INFO : test_5MB :Updating 5MB package details
+2020-09-03 16:05:17,472 :INFO : test_5MB :ATT v38 00 to v38 00 5MB
+2020-09-03 16:05:17,472 :INFO : test_5MB :Upgrade from ATT v38 to v38 5MB
+2020-09-03 16:05:17,472 :INFO : test_5MB :5SA.0.4-14-8.1.0-10.38.00
+2020-09-03 16:05:17,472 :INFO : test_5MB :5SA.0.4-98-8.1.0-10.38.00.5MB
+2020-09-03 16:05:17,642 :INFO : test_5MB :D:\Python_XDM\v38\packages\ATT_v38_00_to_v38_00_5MB.zip
+2020-09-03 16:05:27,375 :INFO : clickAddPackage :Package uploading started,please wait

@@ -91,8 +91,8 @@ class BaseClass:
         assert output == "     Firmware added successfully     "
 
     def excelPathOf16038(self):
-        excel = pd.read_excel(self.excel_path, sheet_name=1)
-        #excel = pd.read_excel(r"D:\Python_XDM\FOTA_Setup_Readme.xlsx", sheet_name=1)
+        #excel = pd.read_excel(self.excel_path, sheet_name=1)
+        excel = pd.read_excel(r"D:\Python_XDM\FOTA_Setup_Readme.xlsx", sheet_name=1)
         path = excel.iloc[3, 2]
         openpyxl.load_workbook(path)
         workbook = openpyxl.load_workbook(path)  # loading workbook from the path given
@@ -100,6 +100,6 @@ class BaseClass:
         return sheet
 
     def packagesPathFromReadmeExcel(self):
-        excel = pd.read_excel(self.excel_path, sheet_name=1)
-        #excel = pd.read_excel(r"D:\Python_XDM\FOTA_Setup_Readme.xlsx", sheet_name=1)
+        #excel = pd.read_excel(self.excel_path, sheet_name=1)
+        excel = pd.read_excel(r"D:\Python_XDM\FOTA_Setup_Readme.xlsx", sheet_name=1)
         return excel

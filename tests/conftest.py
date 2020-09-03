@@ -1,4 +1,5 @@
 import pytest
+import openpyxl
 import pandas as pd
 from selenium import webdriver  # Importing web driver
 from selenium.webdriver.support.select import Select
@@ -78,6 +79,7 @@ def setup(request):
     elif model_name == "XP8800":
         dropdown.select_by_visible_text("XP8800")
         print("XP8800")
+
     request.cls.driver = driver
     yield
     driver.close()
