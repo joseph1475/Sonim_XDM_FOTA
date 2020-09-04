@@ -3223,3 +3223,29 @@ JavaScript warning: https://xdme.wireless.att.com/script/mf_validation.js, line 
 
 ###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
 
+1599210489652	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\joseph.p\\AppData\\Local\\Temp\\rust_mozprofiley2W5Ev"
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1599210499462	Marionette	INFO	Listening on port 62036
+1599210501015	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://xdme.wireless.att.com/script/mf_validation.js, line 95: unreachable code after return statement
+JavaScript warning: https://xdme.wireless.att.com/script/mf_validation.js, line 95: unreachable code after return statement
+JavaScript warning: https://xdme.wireless.att.com/script/mf_validation.js, line 95: unreachable code after return statement
+JavaScript warning: https://xdme.wireless.att.com/script/mf_validation.js, line 95: unreachable code after return statement
+[Parent 11480, Gecko_IOThread] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc, line 166
+1599210527800	Marionette	INFO	Stopped listening on port 62036
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+1599210693756	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\joseph.p\\AppData\\Local\\Temp\\rust_mozprofileszp8cL"
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1599210697321	Marionette	INFO	Listening on port 62098
+1599210697402	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://xdme.wireless.att.com/script/mf_validation.js, line 95: unreachable code after return statement
+JavaScript warning: https://xdme.wireless.att.com/script/mf_validation.js, line 95: unreachable code after return statement
+JavaScript warning: https://xdme.wireless.att.com/script/mf_validation.js, line 95: unreachable code after return statement
+JavaScript warning: https://xdme.wireless.att.com/script/mf_validation.js, line 95: unreachable code after return statement

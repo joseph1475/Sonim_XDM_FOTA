@@ -1,3 +1,5 @@
+from logging import getLogger
+
 import pytest
 import openpyxl
 import pandas as pd
@@ -8,19 +10,14 @@ import time
 driver = None
 
 
-# browser code for selecting different browser at run time :
-@pytest.fixture()
-def pytest_addoption(parser, request):
+# Code for selecting user input at run time :
+def pytest_addoption(parser):
     parser.addoption("--browser_name", action="store", default="Firefox")
     parser.addoption("--model_name", action="store", default="XP5800")
     parser.addoption("--login_name", action="store", help="input useranme")
     parser.addoption("--login_password", action="store", help="input password")
     parser.addoption("--excel_path", action="store", help="input FOTA_Setup_Readme path")
     parser.addoption("--driver_path", action="store", help="input driver path")
-
-    excel_path = request.config.getoption("excel_path")
-    return excel_path
-
 
 @pytest.fixture(scope="class")
 def setup(request):
@@ -42,14 +39,9 @@ def setup(request):
     # excel = pd.read_excel(r"D:\Python_XDM\FOTA_Setup_Readme.xlsx", sheet_name=1)  # using pandas for calling excel
     # username = excel.iloc[0, 2]  # used to locate values
     # password = excel.iloc[1, 2]
-    # excel_path = request.config.getoption("excel_path")
-    # print(excel_path)
-    # excel = pd.read_excel(excel_path, sheet_name=1)
-    # request.cls.excel_path = excel_path
-    username = request.config.getoption("login_name")  # getting login details from jenkins
+    username = request.config.getoption("login_name")  # getting login details from user input
     password = request.config.getoption("login_password")
-    driver.find_element_by_name("LOGIN").send_keys(
-        username)  # Username read from FOTA_Setup_readme.txt using name method
+    driver.find_element_by_name("LOGIN").send_keys(username)
     print("Username entered")
     time.sleep(1)
     driver.find_element_by_css_selector("input[name='PASSWORD']").send_keys(
@@ -64,28 +56,14 @@ def setup(request):
         print("Login failed - !!!XDM account will be blocked on three incorrect password.!!!")
         driver.quit()
 
-    driver.find_element_by_link_text("Setup").click()  # to select setup text in main screen
-    time.sleep(2)
-    driver.find_element_by_link_text("Firmware").click()  # to select Firmware from sub text of Setup
-    dropdown = Select(driver.find_element_by_xpath(
-        "//select[@name ='GROUP_ID']"))  # To handle the drop options we are using select class method by importing Select
-    dropdown.select_by_visible_text("ATT.SONIM")  # select ATT.SONIM from drop box
-    dropdown = Select(driver.find_element_by_xpath("//select[@name='MANU_ID']"))  # selecting next drop down
-    dropdown.select_by_visible_text("Sonim Technologies Inc")  # select Sonim Technologies Inc from drop box
-    # dropdown = Select(driver.find_element_by_xpath("//select[@name='IMEI_ID']"))  # selecting next drop down
-    # dropdown.select_by_visible_text("XP5800")  # select XP5800 from drop box
+    #senting excel_path to BaseClass using request.cls
+    excel_path = request.config.getoption("excel_path")
+    request.cls.excel_path = excel_path
+    print(excel_path)
+    # senting model_name to BaseClass using request.cls
     model_name = request.config.getoption("model_name")
-    dropdown = Select(driver.find_element_by_xpath("//select[@name='IMEI_ID']"))
-    if model_name == "XP5800":
-        dropdown.select_by_visible_text("XP5800")
-        print("XP5800")
-    elif model_name == "XP3800":
-        dropdown.select_by_visible_text("XP3800")
-        print("XP3800")
-    elif model_name == "XP8800":
-        dropdown.select_by_visible_text("XP8800")
-        print("XP8800")
-
+    request.cls.model_name = model_name
+    print(model_name)
     request.cls.driver = driver
     yield
     driver.close()
