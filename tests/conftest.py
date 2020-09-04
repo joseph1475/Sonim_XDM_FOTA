@@ -7,19 +7,25 @@ import time
 
 driver = None
 
-#browser code for selecting different browser at run time :
-def pytest_addoption(parser):
+
+# browser code for selecting different browser at run time :
+@pytest.fixture()
+def pytest_addoption(parser, request):
     parser.addoption("--browser_name", action="store", default="Firefox")
     parser.addoption("--model_name", action="store", default="XP5800")
     parser.addoption("--login_name", action="store", help="input useranme")
-    parser.addoption("--login_password", action = "store", help="input password")
+    parser.addoption("--login_password", action="store", help="input password")
     parser.addoption("--excel_path", action="store", help="input FOTA_Setup_Readme path")
     parser.addoption("--driver_path", action="store", help="input driver path")
 
+    excel_path = request.config.getoption("excel_path")
+    return excel_path
+
+
 @pytest.fixture(scope="class")
 def setup(request):
-    global driver  #defined driver as global so screenshot capture can use it
-    browser_name = request.config.getoption("browser_name")      #browser code for selecting different browser at run time
+    global driver  # defined driver as global so screenshot capture can use it
+    browser_name = request.config.getoption("browser_name")  # browser code for selecting different browser at run time
     driver_path = request.config.getoption("driver_path")
     if browser_name == "Firefox":
         driver = webdriver.Firefox(executable_path=driver_path)
@@ -32,15 +38,15 @@ def setup(request):
     driver.implicitly_wait(30)  # implicitly wait will wait for the events to occur
     print(driver.title)  # title of web page
     print(driver.current_url)  # url loaded to be printed
-    #to run from pycharm enable this
-    #excel = pd.read_excel(r"D:\Python_XDM\FOTA_Setup_Readme.xlsx", sheet_name=1)  # using pandas for calling excel
-    #username = excel.iloc[0, 2]  # used to locate values
-    #password = excel.iloc[1, 2]
-        #excel_path = request.config.getoption("excel_path")
-        #print(excel_path)
-        #excel = pd.read_excel(excel_path, sheet_name=1)
-        #request.cls.excel_path = excel_path
-    username = request.config.getoption("login_name")     #getting login details from jenkins
+    # to run from pycharm enable this
+    # excel = pd.read_excel(r"D:\Python_XDM\FOTA_Setup_Readme.xlsx", sheet_name=1)  # using pandas for calling excel
+    # username = excel.iloc[0, 2]  # used to locate values
+    # password = excel.iloc[1, 2]
+    # excel_path = request.config.getoption("excel_path")
+    # print(excel_path)
+    # excel = pd.read_excel(excel_path, sheet_name=1)
+    # request.cls.excel_path = excel_path
+    username = request.config.getoption("login_name")  # getting login details from jenkins
     password = request.config.getoption("login_password")
     driver.find_element_by_name("LOGIN").send_keys(
         username)  # Username read from FOTA_Setup_readme.txt using name method
@@ -66,8 +72,8 @@ def setup(request):
     dropdown.select_by_visible_text("ATT.SONIM")  # select ATT.SONIM from drop box
     dropdown = Select(driver.find_element_by_xpath("//select[@name='MANU_ID']"))  # selecting next drop down
     dropdown.select_by_visible_text("Sonim Technologies Inc")  # select Sonim Technologies Inc from drop box
-    #dropdown = Select(driver.find_element_by_xpath("//select[@name='IMEI_ID']"))  # selecting next drop down
-    #dropdown.select_by_visible_text("XP5800")  # select XP5800 from drop box
+    # dropdown = Select(driver.find_element_by_xpath("//select[@name='IMEI_ID']"))  # selecting next drop down
+    # dropdown.select_by_visible_text("XP5800")  # select XP5800 from drop box
     model_name = request.config.getoption("model_name")
     dropdown = Select(driver.find_element_by_xpath("//select[@name='IMEI_ID']"))
     if model_name == "XP5800":
@@ -109,4 +115,4 @@ def pytest_runtest_makereport(item):
 
 
 def _capture_screenshot(name):
-        driver.get_screenshot_as_file(name)
+    driver.get_screenshot_as_file(name)

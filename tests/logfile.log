@@ -1096,3 +1096,12 @@
 2020-09-03 16:05:17,472 :INFO : test_5MB :5SA.0.4-98-8.1.0-10.38.00.5MB
 2020-09-03 16:05:17,642 :INFO : test_5MB :D:\Python_XDM\v38\packages\ATT_v38_00_to_v38_00_5MB.zip
 2020-09-03 16:05:27,375 :INFO : clickAddPackage :Package uploading started,please wait
+2020-09-03 17:33:13,532 :INFO : test_5MB :Updating 5MB package details
+2020-09-03 17:33:13,532 :INFO : test_5MB :ATT v43.00 to v43.00 5MB
+2020-09-03 17:33:13,532 :INFO : test_5MB :Upgrade from ATT v43 to v43 5MB
+2020-09-03 17:33:13,532 :INFO : test_5MB :5SA.0.4-17-8.1.0-10.43.00
+2020-09-03 17:33:13,532 :INFO : test_5MB :5SA.0.4-94-8.1.0-10.43.00_5MB
+2020-09-03 17:33:13,726 :INFO : test_5MB :D:\Python_XDM\v43_IFW5\FOTA\SONIM_XP5812_5SA.0.4-17-8.1.0-10.43.00_TO_5SA.0.4-94-8.1.0-10.43.00_USER_5MB
+2020-09-03 17:33:13,748 :INFO : test_5MB :upload failed
+2020-09-03 17:33:13,748 :INFO : test_5MB :=============moving to next upload !!!=============
+2020-09-03 17:33:13,811 :INFO : clickAddPackage :Package uploading started,please wait

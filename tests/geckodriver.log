@@ -3207,3 +3207,19 @@ JavaScript error: chrome://marionette/content/proxy.js, line 287: NS_ERROR_NOT_I
 
 ###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
 
+1599134573635	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\joseph.p\\AppData\\Local\\Temp\\rust_mozprofile8UToZx"
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1599134578606	Marionette	INFO	Listening on port 49630
+1599134578982	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://xdme.wireless.att.com/script/mf_validation.js, line 95: unreachable code after return statement
+JavaScript warning: https://xdme.wireless.att.com/script/mf_validation.js, line 95: unreachable code after return statement
+JavaScript warning: https://xdme.wireless.att.com/script/mf_validation.js, line 95: unreachable code after return statement
+JavaScript warning: https://xdme.wireless.att.com/script/mf_validation.js, line 95: unreachable code after return statement
+1599134594171	Marionette	INFO	Stopped listening on port 49630
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
