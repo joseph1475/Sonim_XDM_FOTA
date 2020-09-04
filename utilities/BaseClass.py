@@ -26,8 +26,7 @@ class BaseClass:
         return logger
 
     def selectProjectDetails(self):
-        pass
-        '''
+
         self.driver.find_element_by_link_text("Setup").click()  # to select setup text in main screen
         time.sleep(2)
         self.driver.find_element_by_link_text("Firmware").click()  # to select Firmware from sub text of Setup
@@ -49,7 +48,7 @@ class BaseClass:
         elif self.model_name == "XP8800":
             dropdown.select_by_visible_text("XP8800")
             print("XP8800")
-        '''
+
 
     def appSeverityMedium(self):
         dropdown = Select(self.driver.find_element_by_xpath("//select[@name ='APP_SEVERITY']"))
@@ -91,8 +90,8 @@ class BaseClass:
         assert output == "     Firmware added successfully     "
 
     def excelPathOf16038(self):
-        excel = pd.read_excel(self.excel_path, sheet_name=1)
-        #excel = pd.read_excel(r"D:\Python_XDM\FOTA_Setup_Readme.xlsx", sheet_name=1)
+        excel = pd.read_excel(self.excel_path, sheet_name=1) #auto select
+        #excel = pd.read_excel(r"D:\Python_XDM\FOTA_Setup_Readme.xlsx", sheet_name=1)   #hardcode method
         path = excel.iloc[3, 2]
         openpyxl.load_workbook(path)
         workbook = openpyxl.load_workbook(path)  # loading workbook from the path given
